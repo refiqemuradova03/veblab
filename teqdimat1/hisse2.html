@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>MenuMate</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+}
+
+html, body{
+    height:100%;
+}
+
+body{
+    background:#f4f1ea;
+}
+
+/* TAM EKRAN */
+.container{
+    width:100%;
+    min-height:100dvh;
+    display:flex;
+    flex-direction:column;
+    padding:40px 25px;
+}
+
+/* HEADER */
+h1{
+    font-size:30px;
+    font-weight:700;
+    color:#2f4f3f;
+}
+
+/* LOGO */
+.logo{
+    text-align:center;
+    margin:40px 0 20px 0;
+}
+
+.logo-icon{
+    font-size:44px;
+}
+
+.logo-text{
+    font-size:28px;
+    font-weight:600;
+    color:#2f4f3f;
+}
+
+/* SECTION */
+.section-title{
+    text-align: center;
+    font-size:30px;
+    font-weight:600;
+    margin:20px 0 15px 0;
+    color:#2f4f3f;
+}
+
+/* GRID */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+}
+
+/* CARD */
+.card{
+    background:white;
+    padding:20px;
+    border-radius:16px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.05);
+    border:2px solid transparent;
+    cursor:pointer;
+    transition:0.2s;
+}
+
+.card.active{
+    border:2px solid #3e6b52;
+    background:#eef5f1;
+}
+
+.icon{
+    font-size:26px;
+}
+
+.card-text{
+    font-weight:600;
+    color:#2f4f3f;
+}
+
+/* ALT HİSSƏ */
+.bottom{
+    margin-top:auto;
+}
+
+.small-text{
+    text-align:center;
+    font-size:14px;
+    color:#7b8f84;
+    margin:25px 0;
+}
+
+.primary-btn{
+    background:#3e6b52;
+    color:white;
+    padding:18px;
+    text-align:center;
+    border-radius:14px;
+    font-size:17px;
+    font-weight:600;
+    cursor:pointer;
+}
+
+.secondary-btn{
+    text-align:center;
+    padding:18px;
+    font-weight:500;
+    color:#2f4f3f;
+    cursor:pointer;
+}
+
+.footer{
+    text-align:center;
+    font-size:12px;
+    color:#8c9a92;
+    margin-top:8px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="logo">
+        <div class="logo-icon">🏠</div>
+        <div class="logo-text">MenuMate</div>
+    </div>
+
+    <div class="section-title">Qida həssaslığınızı seçin</div>
+
+    <div class="grid">
+        <div class="card" onclick="toggle(this)">
+            <div class="icon">🥛</div>
+            <div class="card-text">Süd məhsulları</div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="icon">🥜</div>
+            <div class="card-text">Qoz-fındıq</div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="icon">🌾</div>
+            <div class="card-text">Qluten</div>
+        </div>
+
+        <div class="card" onclick="toggle(this)">
+            <div class="icon">🦐</div>
+            <div class="card-text">Dəniz məhsulları</div>
+        </div>
+    </div>
+
+    <div class="bottom">
+
+        <div class="small-text">
+            İstəsən bu addımı ötür, daha sonra profilində əlavə edə bilərsən.
+        </div>
+
+        <div class="primary-btn">
+            Qeydiyyatdan keçin
+        </div>
+
+        <div class="secondary-btn">
+            <a  style="text-decoration: none; color:black;" href="son.html">Daxil ol</a>
+        </div>
+
+        <div class="footer">
+            © 2025 MenuMate – Sağlam seçim, rahat həyat
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+function toggle(el){
+    el.classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
